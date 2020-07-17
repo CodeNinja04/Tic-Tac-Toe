@@ -46,22 +46,22 @@ const gameplay = (() => {
             items[i].addEventListener("click", () => {
                 if (items[i].textContent === "" && winner === false) {
                     if (symbol === "✕") {
-                        // Replace element's empty string with symbol in gameArray
+                        
                         gameBoard.gameArray[i] = symbol;
-                        // Add symbol to HTML grid and style it
+                        
                         items[i].textContent = symbol;
-                        items[i].style.color = "#545454"; // Black cross
+                        items[i].style.color = "#545454"; 
                         items[i].style.fontSize = "55px";
                         findWinningSequence();
                         symbol = "○";
                         console.log(gameBoard.gameArray);
                         turn++;
                     } else {
-                        // Replace element's empty string with symbol in gameArray
+                        
                         gameBoard.gameArray[i] = symbol;
-                        // Add symbol to HTML grid and style it
+                        
                         items[i].textContent = symbol;
-                        items[i].style.color = "#f2ebd4"; // White circle
+                        items[i].style.color = "#f2ebd4";
                         items[i].style.fontSize = "100px";
                         findWinningSequence();
                         symbol = "✕";
@@ -114,7 +114,7 @@ const gameplay = (() => {
         } else {
             resutmessage.textContent = `Winner: ${Player2.name}   CONGRATULATIONS👏👏`;
         }
-        // Click anywhere to remove Winner Screen
+       
         bgmodel.addEventListener('click', (e) => {
             bgmodel.style.display = "none";
         });
@@ -122,11 +122,11 @@ const gameplay = (() => {
 
     const changename = () => {
         changeName.addEventListener('click', (e) => {
-            // `Do While Loop` repeats prompt if user does not enter PlayerX.length < 12
+            
             do {
                 Player1.name = prompt("Player1 plase Enter your name:", "PLAYER 1");
                 if (Player1.name === null) {
-                    Player1.name = "PLAYER 1"; // Set default name if user cancels
+                    Player1.name = "PLAYER 1"; 
                 }
             } while (Player1.name.length >= 12);
             player1.innerHTML = Player1.name;
